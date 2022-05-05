@@ -84,13 +84,12 @@ It will product sub console to broadcase message
 '' "Producer":{ "bootstrapservers":"localhost:9092"} ''
 
 - In startup file configure producer
-''
- var producerConfig = new ProducerConfig();
+'' var producerConfig = new ProducerConfig();
+
  Configuration.Bind("producer", producerConfig);
         
  services.AddSingleton<ProducerConfig>(producerConfig); ''
-
-
+ 
 # Sample Kafka Net Core Application Consumer Console Application
 
 - Create asp.net core console application
