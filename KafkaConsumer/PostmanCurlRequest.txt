@@ -1,0 +1,6 @@
+﻿curl --location --request POST 'http://localhost:57701/api/Producer/send?topic=TestTopic' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "Id":1,
+    "Name":"Martand Madhawani"
+}'

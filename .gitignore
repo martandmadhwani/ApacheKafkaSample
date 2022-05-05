@@ -5,3 +5,5 @@
 /.vs
 /ApacheKafkaSampleNetCore/bin/Debug/netcoreapp3.1
 /ApacheKafkaSampleNetCore/obj
+/KafkaConsumer/bin/Debug/netcoreapp3.1
+/KafkaConsumer/obj
