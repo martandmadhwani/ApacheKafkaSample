@@ -109,7 +109,7 @@ It will product sub console to broadcase message
             } '' 
 
 
-#Kafka Cheat Sheet - [Useful Commands]
+# Kafka Cheat Sheet - [Useful Commands]
 
 Display Topic Information
 
