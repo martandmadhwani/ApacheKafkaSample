@@ -49,53 +49,52 @@ change it to
 dataDir=c:/kafka/zookeeper
 
 - 5 Run command in cmd
-'' .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties ''
+``` .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties ```
 
 It will start zookeeper on port 2181
 
 -6 open cmd and run below command to start apache kafka
-	'' .\bin\windows\kafka-server-start.bat .\config\server.properties ''
+	``` .\bin\windows\kafka-server-start.bat .\config\server.properties ```
 
 It will start apache kafka
 
 # Create a topic
 
-'' .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic TestTopic ''
+``` .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic TestTopic ```
 
 # List the topics
 
-'' .\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092 ''
+``` .\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092 ```
 
 # Produce message on the topics
 
-'' .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic TestTopic ''
+``` .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic TestTopic ```
 
 It will product sub console to broadcase message
 
 # Consuming the message on the topics
 
-'' .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic TestTopic --from-beginning ''
+``` .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic TestTopic --from-beginning ```
 
 
 # Sample Kafka Net Core Application Producer
 
 - Add nuget package Confluent.Kafka [latest 1.8.2]
 - In appsetting.json add producer
-'' "Producer":{ "bootstrapservers":"localhost:9092"} ''
+``` "Producer":{ "bootstrapservers":"localhost:9092"} ```
 
 - In startup file configure producer
-'' var producerConfig = new ProducerConfig();
-
- Configuration.Bind("producer", producerConfig);
+``` var producerConfig = new ProducerConfig(); 
+Configuration.Bind("producer", producerConfig);
         
- services.AddSingleton<ProducerConfig>(producerConfig); ''
- 
+ services.AddSingleton<ProducerConfig>(producerConfig); ```
+
 # Sample Kafka Net Core Application Consumer Console Application
 
 - Create asp.net core console application
 - Add nuget package Confluent.Kafka [latest 1.8.2]
 - In Program.cs file put below code
-'' var config = new ConsumerConfig()
+``` var config = new ConsumerConfig()
             {
                 GroupId= "gid-consumers",
                 BootstrapServers="localhost:9092"
@@ -109,4 +108,4 @@ It will product sub console to broadcase message
                     var cr = consumer.Consume();
                     Console.WriteLine(cr.Message.Value);
                 }
-            } '' 
+            } ```
