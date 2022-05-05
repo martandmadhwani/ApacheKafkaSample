@@ -29,13 +29,13 @@ Kafka employs the publish/subscribe topology, sending messages across the stream
 apache kafka installation steps
 
 ** Download and setup apache kafka from web url **
-- 1.https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.12-3.1.0.tgz
+- 1. https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.12-3.1.0.tgz
 - 2. Extract tgz folder
 - 3. rename folder to kafka and remove postfix version text and copy folder to c:\ drive
--  3a - bin directory contains windows and linux commands to run apache kafka [bat and sh files]
-   3b - config folder holding all configuration files to configure apache kafka
-   3c - libs folder contains all supporting libs.
-- 4. Update server.properties file in config folder and update log path as below
+- 4. bin directory contains windows and linux commands to run apache kafka [bat and sh files]
+- 5. config folder holding all configuration files to configure apache kafka
+- 6. libs folder contains all supporting libs.
+- 7. Update server.properties file in config folder and update log path as below
 
 #Change server.properties file
 log.dirs=/tmp/kafka-logs
